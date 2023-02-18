@@ -8,7 +8,7 @@ interface RobotProps {
 const Robot = ({
   robot: { name, image, stats, creationDate },
 }: RobotProps): JSX.Element => {
-  const localDateFormat = creationDate.toLocaleString().split(" ")[0];
+  const localDateFormat = creationDate.toLocaleString().split("T")[0];
 
   return (
     <RobotStyled className="robot">
@@ -17,7 +17,7 @@ const Robot = ({
         <h3 className="robot__title">{name}</h3>
         <ul className="robot__stats">
           {Object.entries(stats).map((stat) => (
-            <li className="stats">
+            <li key={`${stat[0]}${stat[1]}`} className="stats">
               <span className="stats__name">
                 {stat[0].charAt(0).toUpperCase() + stat[0].slice(1)}
               </span>
