@@ -4,8 +4,9 @@ import "@fontsource/fredoka-one";
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --primaryColor: #4c4c4c;
-    --accentColor: #5bffff;
+    --primaryColor: #2b2d42;
+    --secondaryColor: #4e5156;
+    --accentColor: #edf2f4;
     --primaryFont: "Quicksand", sans-serif;
     --displayFont: "Fredoka One", sans-serif;
   }
@@ -18,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: var(--primaryFont);
     background-color: var(--primaryColor);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   ul, ol {
