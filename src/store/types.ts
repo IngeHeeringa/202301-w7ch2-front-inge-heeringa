@@ -8,4 +8,8 @@ export interface RobotStructure {
   creationDate: Date;
 }
 
+export interface ApiResponse {
+  robots: RobotsStructure;
+}
+
 export type RobotsStructure = RobotStructure[];

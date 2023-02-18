@@ -1,20 +1,24 @@
+import { useEffect } from "react";
 import Robot from "./components/Robot/Robot";
+import useApi from "./hooks/useApi";
+import { useAppSelector } from "./store/hooks";
 
 const App = (): JSX.Element => {
-  const robot = {
-    name: "Terminator",
-    image:
-      "https://4.bp.blogspot.com/-RoaN1bKLM5k/VZr3d82iiQI/AAAAAAAA8nc/L37sR_nvmiI/w640/terminator.jpg",
-    stats: {
-      speed: 5,
-      endurance: 6,
-    },
-    creationDate: new Date("2024-05-25"),
-  };
+  const { getRobots } = useApi();
+  const robots = useAppSelector((state) => {
+    return state.robots;
+  });
+  useEffect(() => {
+    getRobots();
+  }, [getRobots]);
 
   return (
     <>
-      <Robot robot={robot} />
+      {robots.map((robot) => (
+        <li key={robot.name}>
+          <Robot robot={robot} />
+        </li>
+      ))}
     </>
   );
 };

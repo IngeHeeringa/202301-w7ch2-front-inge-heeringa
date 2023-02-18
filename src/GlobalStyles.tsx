@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.4rem;
   }
 
-  ul, ol {
+  ul, ol, li {
     margin: 0;
     list-style: none;
     padding: 0;

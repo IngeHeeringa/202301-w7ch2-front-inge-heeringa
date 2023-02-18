@@ -8,7 +8,7 @@ interface RobotProps {
 const Robot = ({
   robot: { name, image, stats, creationDate },
 }: RobotProps): JSX.Element => {
-  const localDateFormat = creationDate.toLocaleString().split(" ")[0];
+  const localDateFormat = creationDate.toLocaleString().split("T")[0];
 
   return (
     <RobotStyled className="robot">
