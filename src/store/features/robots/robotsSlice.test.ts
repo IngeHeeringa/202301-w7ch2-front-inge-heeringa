@@ -2,7 +2,7 @@ import { loadRobotsActionCreator, robotsReducer } from "./robotsSlice";
 
 const robots = [
   {
-    name: "terminator",
+    name: "Terminator",
     image: "",
     stats: {
       speed: 5,
@@ -17,7 +17,7 @@ describe("Given a robotsReducer function", () => {
     test("Then it should return that same list of robots, including the robot with name 'terminator'", () => {
       const expectedRobots = [
         {
-          name: "terminator",
+          name: "Terminator",
           image: "",
           stats: {
             speed: 5,
