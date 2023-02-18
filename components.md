@@ -15,7 +15,7 @@
 - Load a robot (details)
 - Delete a robot from the list of robots
 - Add a robot to list of robots
-- Update a robot's data
+- Modify a robot's name and stats
 
 # Components
 
@@ -35,10 +35,19 @@
 ## Robots (list)
 
 - Receives list of robots
-- Show a Robot card component for every robot on the list of robots
+- Receives add robot action
+
 - Sends a robot to each Robot card component
+- Sends addRobot function to "Add" button
+
+- Show a Robot card component for every robot on the list of robots
 
 ## Robot (card)
+
+- Receives delete robot action
+- Receives modify robot action
+- Sends delete robot action to "Delete" button
+- Sends modify robot action to "Modify" button
 
 - Show robot's name inside a heading
 - Show robot's photo, speed, endurance and creation date
@@ -47,12 +56,19 @@
 
 ## Form
 
+- Receives modify robot action
+- Receives add robot action
+
 - Shows an input for the robot's name with label "Name"
 - Shows an input for the robot's image url with label "Image URL"
 - Shows an input for the robot's speed with label "Speed"
 - Shows an input for the robot's endurance with label "Endurance"
 - Shows a button to submit the form
+- On submit executes the add robot action
+- On submit executes the modify robot action
 
 ## Button
 
+- Receives an action
 - Shows the user action ("Delete", "Add" or "Modify") inside a button
+- On click executes the received action
