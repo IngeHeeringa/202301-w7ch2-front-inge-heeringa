@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import "@fontsource/quicksand";
 import "@fontsource/fredoka-one";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   :root {
     --primaryColor: #2b2d42;
     --secondaryColor: #4e5156;
@@ -42,4 +42,4 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 
-export default GlobalStyle;
+export default GlobalStyles;
