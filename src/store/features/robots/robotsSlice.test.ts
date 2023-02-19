@@ -13,8 +13,8 @@ const robots = [
 ];
 
 describe("Given a robotsReducer function", () => {
-  describe("When it receives a list with a robot with name 'terminator' and a loadRobotsAction", () => {
-    test("Then it should return that same list of robots, including the robot with name 'terminator'", () => {
+  describe("When it receives a list with a robot with name 'Terminator' and a loadRobotsAction", () => {
+    test("Then it should return that same list of robots, including the robot with name 'Terminator'", () => {
       const expectedRobots = [
         {
           name: "Terminator",

@@ -1,28 +1,7 @@
-import { useEffect } from "react";
-import Robot from "./components/Robot/Robot";
-import useApi from "./hooks/useApi";
-import { useAppSelector } from "./store/hooks";
+import Robots from "./components/Robots/Robots";
 
 const App = (): JSX.Element => {
-  const { getRobots } = useApi();
-
-  const robots = useAppSelector((state) => {
-    return state.robots;
-  });
-
-  useEffect(() => {
-    getRobots();
-  }, [getRobots]);
-
-  return (
-    <ul>
-      {robots.map((robot) => (
-        <li key={robot.name}>
-          <Robot robot={robot} />
-        </li>
-      ))}
-    </ul>
-  );
+  return <Robots />;
 };
 
 export default App;
