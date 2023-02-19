@@ -17,11 +17,14 @@ const Robots = () => {
 
   return (
     <RobotsStyled className="robots">
-      {robots.map((robot) => (
-        <li key={robot.name}>
-          <Robot robot={robot} />
-        </li>
-      ))}
+      <h2 className="robots__title">All robots</h2>
+      <ul className="robots__list">
+        {robots.map((robot) => (
+          <li className="robots__robot" key={robot.name}>
+            <Robot robot={robot} />
+          </li>
+        ))}
+      </ul>
     </RobotsStyled>
   );
 };
