@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { loadRobotsActionCreator } from "../store/features/robots/robotsSlice";
 import { useAppDispatch } from "../store/hooks";
-import { ApiResponse } from "../store/types";
+import { ApiResponseStructure } from "../store/types";
 
 const useApi = () => {
   const dispatch = useAppDispatch();
@@ -10,7 +10,7 @@ const useApi = () => {
     try {
       const response = await fetch(process.env.REACT_APP_API_URL!);
 
-      const robots = (await response.json()) as ApiResponse;
+      const robots = (await response.json()) as ApiResponseStructure;
 
       dispatch(loadRobotsActionCreator(robots.robots));
     } catch (error) {
