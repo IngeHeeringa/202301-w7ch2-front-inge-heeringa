@@ -6,6 +6,7 @@ describe("Given a Robot component", () => {
   describe("When it receives a robot named 'Terminator' and it renders", () => {
     test("Then it should show the name 'Terminator' in a heading", () => {
       const robot = {
+        id: "1",
         name: "Terminator",
         image: "",
         stats: {

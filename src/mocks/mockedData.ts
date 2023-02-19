@@ -2,8 +2,9 @@ import { configureStore } from "@reduxjs/toolkit";
 import { robotsReducer } from "../store/features/robots/robotsSlice";
 import { ApiResponseStructure, RobotsStructure } from "../store/types";
 
-const mockedRobots: RobotsStructure = [
+export const mockedRobots: RobotsStructure = [
   {
+    id: "1",
     name: "Terminator",
     image: "terminatorImage",
     stats: {
@@ -13,6 +14,7 @@ const mockedRobots: RobotsStructure = [
     creationDate: new Date("2025-04-22T00:00:00.000+00:00"),
   },
   {
+    id: "2",
     name: "Wall-E",
     image: "Wall-EImage",
     stats: {
