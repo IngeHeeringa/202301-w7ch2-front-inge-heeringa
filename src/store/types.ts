@@ -8,7 +8,7 @@ export interface RobotStructure {
   creationDate: Date;
 }
 
-export interface ApiResponse {
+export interface ApiResponseStructure {
   robots: RobotsStructure;
 }
 
