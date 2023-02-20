@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import GlobalStyles from "../../GlobalStyles";
+import Wrapper from "../../mocks/Wrapper";
 import Robot from "./Robot";
 
 describe("Given a Robot component", () => {
@@ -17,10 +18,10 @@ describe("Given a Robot component", () => {
       };
 
       render(
-        <>
+        <Wrapper>
           <GlobalStyles />
           <Robot robot={robot} />
-        </>
+        </Wrapper>
       );
       const name = screen.getByRole("heading", { name: robot.name });
 

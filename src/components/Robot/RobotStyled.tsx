@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const RobotStyled = styled.article`
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 355px;
