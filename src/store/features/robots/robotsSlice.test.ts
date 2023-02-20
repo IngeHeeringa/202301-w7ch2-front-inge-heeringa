@@ -48,7 +48,7 @@ describe("Given a robotsReducer function", () => {
       const deleteRobot = deleteRobotActionCreator;
       const expectedRobots = [robots[1]];
 
-      const resultedRobots = robotsReducer(robots, deleteRobot(1));
+      const resultedRobots = robotsReducer(robots, deleteRobot("1"));
 
       expect(resultedRobots).toStrictEqual(expectedRobots);
     });

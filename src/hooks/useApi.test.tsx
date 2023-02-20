@@ -5,7 +5,6 @@ import { useAppDispatch } from "../store/hooks";
 import useApi from "./useApi";
 
 jest.mock("../store/hooks", () => ({
-  ...jest.requireActual("../store/hooks"),
   useAppDispatch: jest.fn(),
 }));
 

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/quicksand";
 import "@fontsource/fredoka-one";
+import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -20,6 +21,10 @@ const GlobalStyles = createGlobalStyle`
     font-family: var(--primaryFont);
     background-color: var(--primaryColor);
     font-size: 1.4rem;
+  }
+
+  h1, h2, h3 {
+      font-weight: normal;
   }
 
   ul, ol, li {
