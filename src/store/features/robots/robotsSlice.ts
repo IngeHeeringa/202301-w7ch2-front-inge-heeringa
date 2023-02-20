@@ -1,18 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RobotsStructure } from "../../types";
 
+const initialState: RobotsStructure = [];
+
 const robotsSlice = createSlice({
   name: "robots",
-  initialState: [] as RobotsStructure,
+  initialState: initialState,
   reducers: {
-    loadRobots: (
-      currentRobots: RobotsStructure,
-      action: PayloadAction<RobotsStructure>
-    ) => [...action.payload],
-    deleteRobot: (
-      currentRobots: RobotsStructure,
-      action: PayloadAction<number>
-    ) => currentRobots.filter(({ id }) => +id !== action.payload),
+    loadRobots: (currentState, action: PayloadAction<RobotsStructure>) => [
+      ...action.payload,
+    ],
+    deleteRobot: (currentState, action: PayloadAction<string>) =>
+      currentState.filter((robot) => robot.id !== action.payload),
   },
 });
 

@@ -1,4 +1,5 @@
 import { RobotStructure } from "../../store/types";
+import DeleteAction from "../DeleteAction/DeleteAction";
 import RobotStyled from "./RobotStyled";
 
 interface RobotProps {
@@ -6,12 +7,13 @@ interface RobotProps {
 }
 
 const Robot = ({
-  robot: { name, image, stats, creationDate },
+  robot: { id, name, image, stats, creationDate },
 }: RobotProps): JSX.Element => {
   const localDateFormat = creationDate.toLocaleString().split("T")[0];
 
   return (
     <RobotStyled className="robot">
+      <DeleteAction id={`${id}`} />
       <img className="robot__image" src={image} alt={name} />
       <div className="robot__body">
         <h3 className="robot__title">{name}</h3>

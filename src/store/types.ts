@@ -14,3 +14,13 @@ export interface ApiResponseStructure {
 }
 
 export type RobotsStructure = RobotStructure[];
+
+export interface UserStructure {
+  username: string;
+  token: string;
+  id: string;
+}
+
+export interface UserState {
+  isLogged: boolean;
+}
