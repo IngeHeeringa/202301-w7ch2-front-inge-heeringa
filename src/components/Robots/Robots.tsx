@@ -20,6 +20,7 @@ const Robots = () => {
     <Wrapper>
       <RobotsStyled className="robots">
         <h2 className="robots__title">All robots</h2>
+
         <ul className="robots__list">
           {robots.map((robot) => (
             <li className="robots__robot" key={robot.name}>

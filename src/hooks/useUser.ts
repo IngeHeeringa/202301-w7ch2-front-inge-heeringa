@@ -9,6 +9,7 @@ import { loginUserActionCreator } from "../store/features/user/userSlice";
 
 const useUser = () => {
   const dispatch = useAppDispatch();
+  const tokenKey = "token";
 
   const loginUser = async (userCredentials: UserCredentials) => {
     const response = await fetch(process.env.REACT_APP_LOGIN_URL!, {
@@ -23,6 +24,8 @@ const useUser = () => {
       const { token } = (await response.json()) as LoginResponse;
 
       const { username } = decode(token) as CustomTokenPayload;
+
+      localStorage.setItem(tokenKey, token);
 
       dispatch(loginUserActionCreator({ username, token }));
     } catch (error: unknown) {
