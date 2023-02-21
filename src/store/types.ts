@@ -1,3 +1,5 @@
+import { JwtPayload } from "jwt-decode";
+
 export interface RobotStructure {
   id: string;
   name: string;
@@ -18,9 +20,25 @@ export type RobotsStructure = RobotStructure[];
 export interface UserStructure {
   username: string;
   token: string;
-  id: string;
 }
 
-export interface UserState {
+export interface UserState extends UserStructure {
   isLogged: boolean;
+}
+
+export interface UseUserStructure {
+  loginUser: (userCredentials: UserCredentials) => Promise<void>;
+}
+
+export interface UserCredentials {
+  username: string;
+  password: string;
+}
+
+export interface LoginResponse {
+  token: string;
+}
+
+export interface CustomTokenPayload extends JwtPayload {
+  username: string;
 }

@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { robotsReducer } from "../store/features/robots/robotsSlice";
+import { userReducer } from "../store/features/user/userSlice";
 import { ApiResponseStructure, RobotsStructure } from "../store/types";
 
 export const mockedRobots: RobotsStructure = [
@@ -32,5 +33,6 @@ export const mockedApiResponse: ApiResponseStructure = {
 export const mockedStore = configureStore({
   reducer: {
     robots: robotsReducer,
+    user: userReducer,
   },
 });
