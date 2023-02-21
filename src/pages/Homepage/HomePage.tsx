@@ -1,4 +1,4 @@
-import Robots from "../components/Robots/Robots";
+import Robots from "../../components/Robots/Robots";
 
 const HomePage = (): JSX.Element => {
   return <Robots />;
