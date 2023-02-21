@@ -1,4 +1,4 @@
-import Robots from "../Robots/Robots";
+import { Outlet } from "react-router-dom";
 import LayoutStyled from "./LayoutStyled";
 
 const Layout = () => {
@@ -7,7 +7,7 @@ const Layout = () => {
       <header className="main-header">
         <h1 className="main-title">Robots</h1>
       </header>
-      <Robots />
+      <Outlet />
     </LayoutStyled>
   );
 };
