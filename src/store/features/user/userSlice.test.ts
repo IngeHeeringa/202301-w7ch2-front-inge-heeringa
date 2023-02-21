@@ -4,17 +4,17 @@ describe("Given the userReducer function", () => {
   describe("When it receives a user with a negative isLogged status and a loginUserAction", () => {
     test("Then it should return a user with username '', a token 'abc123', an id  and a positive isLogged status", () => {
       const currentUserState = {
+        username: "",
+        token: "",
         isLogged: false,
       };
       const user = {
         username: "New user",
         token: "abc123",
-        id: "xyz987",
       };
       const expectedUserState = {
         username: "New user",
         token: "abc123",
-        id: "xyz987",
         isLogged: true,
       };
       const loginUserAction = loginUserActionCreator(user);
