@@ -36,8 +36,11 @@ const GlobalStyles = createGlobalStyle`
   button, input {
     font-family: inherit;
     font-size: inherit;
-    background-color: transparent;
     border: none;
+  }
+
+  button {
+    background-color: transparent;
   }
 
   a, a:active, a:visited {

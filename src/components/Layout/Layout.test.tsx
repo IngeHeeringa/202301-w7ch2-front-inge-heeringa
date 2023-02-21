@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import Wrapper from "../../mocks/Wrapper";
 import Layout from "./Layout";
 
@@ -8,7 +9,8 @@ describe("Given a Layout component", () => {
       render(
         <Wrapper>
           <Layout />
-        </Wrapper>
+        </Wrapper>,
+        { wrapper: BrowserRouter }
       );
 
       const title = screen.getByRole("heading", {

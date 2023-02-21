@@ -6,6 +6,7 @@ const DeleteActionStyled = styled.button`
   font-size: 45px;
   right: 5%;
   top: 2%;
+  cursor: pointer;
 `;
 
 export default DeleteActionStyled;
